@@ -29,8 +29,8 @@ POST /employees
 PUT /employees/{id}
 DELETE /employees/{id}
 
-## Author
-Yashodhar G K
+<img width="1631" height="958" alt="Screenshot 2026-06-17 070157" src="https://github.com/user-attachments/assets/2a854da6-0b96-4f27-8347-2d04204cfcdf" />
+
 
 ## How to Run
 
@@ -96,3 +96,6 @@ POST /employees
 PUT /employees/{id}
 DELETE /employees/{id}
 ```
+
+## Author
+Yashodhar G K
