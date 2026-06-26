@@ -1,124 +1,256 @@
-Employee Management System
+# 🚀 Employee Management System
 
-A secure RESTful Employee Management System built using Spring Boot.
+> A secure **Employee Management REST API** built using **Spring Boot**, **Spring Security (JWT)**, **Spring Data JPA**, and **Hibernate**. The application enables secure employee management through JWT-based authentication and role-based authorization while following a clean layered architecture.
 
-------------------------------------------------
+---
 
-Features
+## 📖 Overview
 
-✔ JWT Authentication
+The Employee Management System is a backend REST API designed to demonstrate modern Java backend development practices.
 
-✔ Role-Based Authorization
+It provides secure authentication, role-based access control, and CRUD operations for employee management while following industry-standard architecture and coding practices.
 
-✔ CRUD Operations
+This project is part of my backend development portfolio and is continuously enhanced with production-ready features.
 
-✔ Spring Security
+---
 
-✔ Spring Data JPA
+## ✨ Features
 
-✔ Exception Handling
+### Security
 
-✔ DTO Mapping
+* JWT Authentication
+* Role-Based Authorization
+* Protected REST APIs
+* Stateless Authentication
 
-✔ Validation
+### Employee Management
 
-✔ H2 Database
+* Create Employee
+* View Employee
+* Update Employee
+* Delete Employee
 
-------------------------------------------------
+### Backend Features
 
-Tech Stack
+* Spring Boot REST API
+* Spring Data JPA
+* Hibernate ORM
+* DTO Pattern
+* Global Exception Handling
+* Validation
+* Layered Architecture
 
-Java
+---
 
-Spring Boot
+## 🛠 Tech Stack
 
+| Category        | Technology                 |
+| --------------- | -------------------------- |
+| Language        | Java 21                    |
+| Framework       | Spring Boot                |
+| Security        | Spring Security, JWT       |
+| ORM             | Spring Data JPA, Hibernate |
+| Database        | H2 Database                |
+| Build Tool      | Maven                      |
+| Testing         | Postman                    |
+| Version Control | Git & GitHub               |
+
+---
+
+## 🏛 Architecture
+
+```text
+                Client
+
+                   │
+
+              HTTP Request
+
+                   │
+
+       Spring Security Filter
+
+                   │
+
+        JWT Authentication
+
+                   │
+
+             REST Controller
+
+                   │
+
+                Service
+
+                   │
+
+              Repository
+
+                   │
+
+              H2 Database
+```
+
+---
+
+## 📂 Project Structure
+
+```text
+src
+└── main
+    ├── java
+    │   ├── controller
+    │   ├── service
+    │   ├── repository
+    │   ├── entity
+    │   ├── dto
+    │   ├── security
+    │   ├── config
+    │   ├── exception
+    │   └── EmployeeManagementApplication
+    │
+    └── resources
+        ├── application.properties
+        └── static
+```
+
+---
+
+## 🔐 Authentication Flow
+
+```text
+User Login
+      │
+      ▼
 Spring Security
-
-Spring Data JPA
-
-Hibernate
-
-JWT
-
-Maven
-
-H2 Database
-
-------------------------------------------------
-
-Project Structure
-
-Controller
-
-↓
-
-Service
-
-↓
-
-Repository
-
-↓
-
-Database
-
-------------------------------------------------
-
-Authentication Flow
-
-Login
-
-↓
-
+      │
+      ▼
+Authentication Manager
+      │
+      ▼
 JWT Generated
+      │
+      ▼
+Client Stores Token
+      │
+      ▼
+Authorization Header
+      │
+      ▼
+JWT Validation Filter
+      │
+      ▼
+Protected REST API
+```
 
-↓
+---
 
-Client stores JWT
+## 📡 REST API Endpoints
 
-↓
+### Authentication
 
-JWT sent in Authorization Header
+| Method | Endpoint         | Description       |
+| ------ | ---------------- | ----------------- |
+| POST   | `/auth/register` | Register User     |
+| POST   | `/auth/login`    | Authenticate User |
 
-↓
+### Employee APIs
 
-Spring Security validates token
+| Method | Endpoint          |
+| ------ | ----------------- |
+| GET    | `/employees`      |
+| GET    | `/employees/{id}` |
+| POST   | `/employees`      |
+| PUT    | `/employees/{id}` |
+| DELETE | `/employees/{id}` |
 
-↓
+---
 
-Request reaches Controller
+## 🚀 Getting Started
 
-------------------------------------------------
+### Clone Repository
 
-API Endpoints
+```bash
+git clone https://github.com/yashodhargk7-debug/employee-management-system.git
+```
 
-POST /api/auth/login
+### Navigate to Project
 
-POST /api/auth/register
+```bash
+cd employee-management-system
+```
 
-GET /api/employees
+### Run Application
 
-POST /api/employees
+```bash
+mvn spring-boot:run
+```
 
-PUT /api/employees/{id}
+Application runs at
 
-DELETE /api/employees/{id}
+```text
+http://localhost:8080
+```
 
-------------------------------------------------
+---
 
-How to Run
+## 📸 Screenshots
 
-1. Clone Repository
+Screenshots will be added after integrating Swagger/OpenAPI and the frontend interface.
 
-2. Open in IntelliJ IDEA
+---
 
-3. Run
+## 📈 Project Roadmap
 
-4. Open Swagger (later)
+### Completed
 
-------------------------------------------------
+* ✅ CRUD Operations
+* ✅ Spring Security
+* ✅ JWT Authentication
+* ✅ Role-Based Authorization
+* ✅ DTO Pattern
+* ✅ Exception Handling
+* ✅ Layered Architecture
 
+### Upcoming
 
-Author
+* ⏳ Swagger / OpenAPI
+* ⏳ OAuth2 Login (Google/GitHub)
+* ⏳ PostgreSQL Migration
+* ⏳ Logging
+* ⏳ Docker
+* ⏳ Cloud Deployment
+* ⏳ Unit Testing
+* ⏳ Integration Testing
 
-Yashodhar G K
+---
+
+## 📚 Key Concepts Practiced
+
+* REST API Development
+* Spring Boot
+* Spring Security
+* JWT Authentication
+* Spring Data JPA
+* Hibernate
+* DTO Mapping
+* Dependency Injection
+* Exception Handling
+* Layered Architecture
+* Git & GitHub
+
+---
+
+## 👨‍💻 Author
+
+**Yashodhar G K**
+
+Java Backend Developer
+
+GitHub: https://github.com/yashodhargk7-debug
+
+---
+
+## ⭐ Support
+
+If you found this project useful, consider giving it a ⭐ on GitHub.
