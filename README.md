@@ -1,101 +1,124 @@
-# Employee Management System
+Employee Management System
 
-A Spring Boot REST API for managing employees with role-based access control.
+A secure RESTful Employee Management System built using Spring Boot.
 
-## Features
-- Employee CRUD Operations
-- Spring Security Authentication
-- Role Based Authorization (ADMIN / USER)
-- BCrypt Password Encryption
-- H2 Database
-- REST APIs
+------------------------------------------------
 
-## Tech Stack
-- Java 21
-- Spring Boot
-- Spring Security
-- Spring Data JPA
-- H2 Database
-- Maven
+Features
 
-## API Endpoints
+✔ JWT Authentication
 
-### Authentication
-POST /auth/register
+✔ Role-Based Authorization
 
-### Employees
-GET /employees
-POST /employees
-PUT /employees/{id}
-DELETE /employees/{id}
+✔ CRUD Operations
 
-<img width="1631" height="958" alt="Screenshot 2026-06-17 070157" src="https://github.com/user-attachments/assets/2a854da6-0b96-4f27-8347-2d04204cfcdf" />
+✔ Spring Security
+
+✔ Spring Data JPA
+
+✔ Exception Handling
+
+✔ DTO Mapping
+
+✔ Validation
+
+✔ H2 Database
+
+------------------------------------------------
+
+Tech Stack
+
+Java
+
+Spring Boot
+
+Spring Security
+
+Spring Data JPA
+
+Hibernate
+
+JWT
+
+Maven
+
+H2 Database
+
+------------------------------------------------
+
+Project Structure
+
+Controller
+
+↓
+
+Service
+
+↓
+
+Repository
+
+↓
+
+Database
+
+------------------------------------------------
+
+Authentication Flow
+
+Login
+
+↓
+
+JWT Generated
+
+↓
+
+Client stores JWT
+
+↓
+
+JWT sent in Authorization Header
+
+↓
+
+Spring Security validates token
+
+↓
+
+Request reaches Controller
+
+------------------------------------------------
+
+API Endpoints
+
+POST /api/auth/login
+
+POST /api/auth/register
+
+GET /api/employees
+
+POST /api/employees
+
+PUT /api/employees/{id}
+
+DELETE /api/employees/{id}
+
+------------------------------------------------
+
+How to Run
+
+1. Clone Repository
+
+2. Open in IntelliJ IDEA
+
+3. Run
+
+4. Open Swagger (later)
+
+------------------------------------------------
 
 
-## How to Run
+Author
 
-### Prerequisites
-
-- Java 21
-- Maven
-
-### Steps
-
-1. Clone the repository
-
-```bash
-git clone https://github.com/yashodhargk7-debug/employee-management-system.git
-```
-
-2. Navigate to the project folder
-
-```bash
-cd employee-management-system
-```
-
-3. Run the application
-
-```bash
-mvn spring-boot:run
-```
-
-4. The application will start on
-
-```text
-http://localhost:8081
-```
-
-### H2 Database Console
-
-Open:
-
-```text
-http://localhost:8081/h2-console
-```
-
-Use:
-
-```text
-Username: sa
-Password:
-```
-
-### API Endpoints
-
-#### Authentication
-
-```text
-POST /auth/register
-```
-
-#### Employees
-
-```text
-GET /employees
-POST /employees
-PUT /employees/{id}
-DELETE /employees/{id}
-```
-
-## Author
 Yashodhar G K
